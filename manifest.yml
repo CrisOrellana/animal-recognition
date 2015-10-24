@@ -1,0 +1,13 @@
+declared-services:
+  visual-recognition-service:
+    label: visual_recognition
+    plan: free
+applications:
+- services:
+  - visualRecognition_test
+  name: visual-recognition-nodejs
+  command: node app.js
+  path: .
+  memory: 512M
+  env:
+    NODE_ENV: production
